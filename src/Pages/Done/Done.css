@@ -1,0 +1,94 @@
+/* Done.css */
+
+.heading {
+  @apply flex flex-col font-poppins font-bold text-white mt-8 text-center text-3xl md:text-4xl lg:text-5xl;
+}
+.heading span {
+  @apply text-lg md:text-xl lg:text-2xl;
+}
+
+.done-wrapper {
+  @apply container flex justify-center p-4;
+}
+
+.done-content {
+  @apply flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start w-full max-w-6xl;
+}
+
+.done-animation {
+  @apply flex justify-center items-center w-full lg:w-1/2 mb-6 lg:mb-0;
+}
+
+.done-lottie {
+  width: 100%;
+  max-width: 300px; /* Default max-width for small screens */
+}
+
+/* Custom media query for exact control at medium screen sizes */
+@media (min-width: 768px) {
+  .done-lottie {
+    max-width: 350px; /* Custom max-width for medium screens */
+  }
+}
+
+.done-tasks-container {
+  @apply flex flex-col justify-start w-full max-w-xs sm:max-w-md lg:max-w-sm p-4;
+}
+
+.done-title {
+  @apply font-poppins text-xl sm:text-2xl lg:text-3xl text-white mb-2 font-bold;
+}
+
+.done-count {
+  @apply text-red-500 text-lg sm:text-xl;
+}
+
+.done-tasks-list {
+  @apply space-y-3;
+}
+
+.done-task {
+  @apply flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-3 rounded-full shadow-md;
+  opacity: 0; /* Start hidden */
+  transform: translateY(10px); /* Initial position for animation */
+  animation: fadeInUp 0.6s ease forwards;
+  text-align: left;
+}
+
+/* Staggered animation delays */
+.done-task[data-index="0"] {
+  animation-delay: 0.2s;
+}
+.done-task[data-index="1"] {
+  animation-delay: 0.4s;
+}
+.done-task[data-index="2"] {
+  animation-delay: 0.6s;
+}
+.done-task[data-index="3"] {
+  animation-delay: 0.8s;
+}
+
+/* Keyframe animation for fading and sliding tasks in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.done-icon {
+  @apply text-green-500 text-lg md:text-xl;
+}
+
+.done-task-name {
+  @apply text-gray-800 font-semibold text-sm sm:text-base lg:text-lg;
+}
+
+.done-task-timestamp {
+  @apply text-gray-500 text-xs sm:text-sm lg:text-base;
+}

@@ -1,0 +1,17 @@
+/* Navbar.css */
+.navbar {
+  @apply flex justify-center gap-14 pt-10;
+}
+
+.navbar a {
+  @apply font-bold text-white text-2xl relative;
+}
+
+.nav-link::after {
+  @apply absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300;
+  content: "";
+}
+
+.nav-link-active::after {
+  @apply w-full;
+}

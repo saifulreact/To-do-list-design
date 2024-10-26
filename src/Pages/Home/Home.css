@@ -1,0 +1,35 @@
+/* Home.css */
+
+.flex-container {
+  @apply flex flex-col lg:flex-row items-center justify-center gap-8 lg:mt-20 lg:gap-12;
+}
+
+.text-section {
+  @apply max-w-xl mt-12 lg:mt-16 text-black text-center lg:text-left;
+  /* Adjusted margin-top for better spacing */
+}
+
+.text-section h1 {
+  @apply text-4xl sm:text-5xl lg:text-6xl font-bold font-poppins mb-3 lg:mb-4 text-black;
+}
+
+.text-section h2 {
+  @apply text-2xl sm:text-3xl lg:text-4xl font-poppins font-medium mb-3 lg:mb-4 text-black;
+}
+
+.text-section p {
+  @apply text-base sm:text-lg lg:text-lg font-poppins font-semibold mb-6 lg:mb-8 text-black;
+}
+
+.animation-container {
+  @apply sm:max-w-md  w-full rounded-lg overflow-hidden flex justify-center items-center
+  mt-8 lg:mt-0;
+}
+
+.get-started-button {
+  @apply inline-block px-6 py-3 sm:px-8 sm:py-3 bg-white text-black font-semibold rounded cursor-pointer transition-transform duration-200;
+}
+
+.get-started-button:active {
+  @apply bg-[#7AB2D3] scale-105 rounded-md;
+}
